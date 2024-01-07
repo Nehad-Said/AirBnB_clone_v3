@@ -74,7 +74,8 @@ class DBStorage:
         """ retrieve one object"""
         if cls is None and id is None:
             return None
-        for key, value in self.__objects.items():
+        results = self.all(cls)
+        for key, value in results.items():
             if value.__class__ == cls and value.id == id:
                 return "[{}] ({}) {{'name': '{}', 'updated_at': {}, 'created_at': {}}}".format(value.__class__.__name__, value.id, value.name, value.updated_at, value.created_at)
 
@@ -82,8 +83,10 @@ class DBStorage:
         """ method to count the number of objects in storage"""
         if cls:
             obj = []
-            for key, value in self.__objects.items():
+            found_classes = self.all(cls)
+            for key, value in found_classes.items():
                 if value.__class__ == cls:
                     obj.append({key: value})
             return len(obj)
-        return len(self.__objects.items())
+        results = self.all()
+        return len(results.items())
