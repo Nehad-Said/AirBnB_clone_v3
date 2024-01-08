@@ -23,7 +23,7 @@ if __name__ == "__main__":
     host = os.environ.get("HBNB_API_HOST")
     port = os.environ.get("HBNB_API_PORT")
     if port is None:
-        post = "5000"
+        post = 5000
     if host is None:
         host = "0.0.0.0"
-    app.run(port, host, threaded=True)
+    app.run(port=port, host=host, threaded=True)
