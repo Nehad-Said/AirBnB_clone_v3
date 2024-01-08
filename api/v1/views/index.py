@@ -6,7 +6,7 @@
 from api.v1.views import app_views
 
 
-@app_views.route('/api/v1/status')
+@app_views.route('/status')
 def status():
     """ This return the status Ok"""
     return {"status": "OK"}
