@@ -19,6 +19,7 @@ def tear_down(exception=None):
 
 
 if __name__ == "__main__":
+    """ Runs the app"""
     import os
     host = os.environ.get("HBNB_API_HOST")
     port = os.environ.get("HBNB_API_PORT")
