@@ -17,6 +17,7 @@ def tear_down(exception=None):
     """ Closes the database session on each request"""
     storage.close()
 
+
 @app.errorhandler(404)
 def handle_error(e):
     """ Return a json error"""
