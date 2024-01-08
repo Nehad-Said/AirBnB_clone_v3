@@ -87,5 +87,4 @@ class DBStorage:
                 if value.__class__ == cls:
                     obj.append({key: value})
             return len(obj)
-        results = self.all()
-        return len(results.items())
+        return len(self.all().items())
