@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """ Flask Api module entry file"""
 
 

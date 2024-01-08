@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """ Index Blue print file"""
 
 
@@ -14,13 +13,13 @@ from models.user import User
 from models.review import Review
 
 
-@app_views.route('/status', methods=['GET'])
+@app_views.route('/status', strict_slashes=False, methods=['GET'])
 def status():
     """ This return the status Ok"""
     return jsonify({"status": "OK"})
 
 
-@app_views.route("/stats", methods=['GET'])
+@app_views.route("/stats", strict_slashes=False, methods=['GET'])
 def count():
     """ Retrieve number of objects"""
     return jsonify({
