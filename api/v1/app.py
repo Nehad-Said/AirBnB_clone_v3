@@ -3,9 +3,9 @@
 """ Flask Api module entry file"""
 
 
+from api.v1.views import app_views
 from flask import Flask
 from models import storage
-from api.v1.views import app_views
 
 
 app = Flask(__name__)
@@ -26,4 +26,4 @@ if __name__ == "__main__":
         post = "5000"
     if host is None:
         host = "0.0.0.0"
-    app.run(port=port, host=host, threaded=True)
+    app.run(port, host, threaded=True)
