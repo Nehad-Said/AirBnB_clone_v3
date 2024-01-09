@@ -2,7 +2,7 @@
 """ State api module """
 
 from models import storage
-from models.amenities import Amenity
+from models.amenity import Amenity
 from api.v1.views import app_views
 from flask import jsonify, abort, request
 

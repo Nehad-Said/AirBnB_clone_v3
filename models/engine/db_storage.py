@@ -75,7 +75,7 @@ class DBStorage:
         all_objects = self.all(cls)
         if all_objects is None:
             return None
-        obj = f"{cls.__name__}.{id}"
+        obj = "{}.{}".format(cls.__name__, id)
         return all_objects[obj]
 
     def count(self, cls=None):
