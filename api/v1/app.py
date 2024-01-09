@@ -27,7 +27,7 @@ if __name__ == "__main__":
     """ Runs the app"""
     import os
     host = os.environ.get("HBNB_API_HOST")
-    port = os.environ.get("HBNB_API_PORT")
+    port = int(os.environ.get("HBNB_API_PORT"))
     if port is None:
         port = 5000
     if host is None:
