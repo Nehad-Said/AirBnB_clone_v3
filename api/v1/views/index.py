@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Index Blue print file"""
+"""
+Index Flask Blueprint file
+it returns the status and stats
+"""
 
 
 from api.v1.views import app_views

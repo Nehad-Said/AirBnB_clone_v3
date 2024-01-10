@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-'''
+"""
+Module
 Flask Api module entry file (app).
 This is the main file of AirBnB project APIs
 
-'''
+"""
 from flask import Flask, jsonify
 from api.v1.views import app_views
 from models import storage
