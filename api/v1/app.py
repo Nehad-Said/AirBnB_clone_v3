@@ -4,11 +4,10 @@ Flask Api module entry file (app).
 This is the main file of AirBnB project APIs
 
 '''
-
-
 from flask import Flask, jsonify
 from api.v1.views import app_views
 from models import storage
+import os
 
 
 app = Flask(__name__)
@@ -28,7 +27,6 @@ def handle_error(e):
 
 
 if __name__ == "__main__":
-    import os
     host = os.environ.get("HBNB_API_HOST")
     port = int(os.environ.get("HBNB_API_PORT"))
     if port is None:
