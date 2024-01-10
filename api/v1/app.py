@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-""" Flask Api module entry file"""
+"""
+Flask Api module entry file (app).
+
+This is the main file of AirBnB project APIs
+
+"""
 
 
-from api.v1.views import app_views
-from flask_cors import CORS
 from flask import Flask, jsonify
+from api.v1.views import app_views
 from models import storage
 
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
-cors = CORS(app, resources={r"/api/v1/*": {"origins": "0.0.0.0"}})
 
 
 @app.teardown_appcontext
@@ -26,7 +29,6 @@ def handle_error(e):
 
 
 if __name__ == "__main__":
-    """ Runs the app"""
     import os
     host = os.environ.get("HBNB_API_HOST")
     port = int(os.environ.get("HBNB_API_PORT"))
