@@ -28,6 +28,7 @@ def handle_error(e):
 
 
 if __name__ == "__main__":
+    """Runs the app"""
     host = os.environ.get("HBNB_API_HOST", "0.0.0.0")
     port = int(os.environ.get("HBNB_API_PORT", "5000"))
     app.run(port=port, host=host, threaded=True)
