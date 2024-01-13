@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""creating api with flask"""
+"""Flask module for AirBnB APIs"""
 
 from flask import Flask
 from models import storage
