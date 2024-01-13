@@ -1,3 +1,5 @@
+"""Initialization file for app_views"""
+
 from flask import Blueprint
 
 
