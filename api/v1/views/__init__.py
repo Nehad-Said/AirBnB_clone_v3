@@ -1,4 +1,5 @@
-"""Initialization file for app_views"""
+#!/usr/bin/python3
+"""Initialization module for app_views blueprint"""
 
 from flask import Blueprint
 

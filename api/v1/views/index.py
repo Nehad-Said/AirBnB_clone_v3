@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Index Flask Blueprint file
+Index module for API status
 it returns the status and stats
 """
 
