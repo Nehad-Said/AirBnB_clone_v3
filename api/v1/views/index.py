@@ -5,7 +5,7 @@ it returns the status and stats
 """
 
 
-from api.v1.views import app_views
+from . import app_views
 from models.amenity import Amenity
 from models.city import City
 from flask import jsonify
